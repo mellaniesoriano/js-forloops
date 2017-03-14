@@ -49,11 +49,23 @@ This function will iterate through the person parameter and console.log the foll
 "President person was a great leader."
 */
 
+//3
+
 var presidents = ["Washington", "Adams", "Jefferson", "Madison", "Monroe"]
 
 for(var i = 0; i<presidents.length; i++){
   console.log("The value at " + [i] + " is " + presidents[i] + ".");
 }
+
+//3A
+
+function leaders(person){
+  for(var i = 0; i<person.length; i++){
+    console.log("President " + presidents[i] + " was a great leader.");
+  }
+}
+leaders(presidents);
+console.log(presidents);
 
 
 /* 4) Line Number
