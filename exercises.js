@@ -73,14 +73,29 @@ Declare a variable named `stringOfNumbers` and assign its value to an empty stri
 
 Write a for-loop that concatenates a Number value into that string on each iteration, starting at `10` and continuing up to and including `20`. Console.log your result. It should read "1011121314151617181920"*/
 
+var stringOfNumbers = " ";
+
+for(var i = 10; i<21; i++){
+  stringOfNumbers += i;
+}
+console.log(stringOfNumbers);
 
 /* 5) Even Stevens
 Declare a variable named `evenNumArr` and assign its value to an empty array. 
 
-Write a for-loop that will push even numbers to the `evenNumArr` array. We want to push 50 even even numbers starting from 0.
+Write a for-loop that will push even numbers to the `evenNumArr` array. We want to push 50 even numbers starting from 0.
 Console.log your results.
 */
 
+var evenNumArr = []
+
+for(var i = 0; i<100; i++){
+  if(i % 2 === 0){
+    evenNumArr.push(i);
+  }
+}
+
+console.log(evenNumArr);
 
 /* 6) Up the Odds
 Declare a variable named `oddSum` and assign it to the Number value 0.
@@ -88,6 +103,15 @@ Declare a variable named `oddSum` and assign it to the Number value 0.
 Write a for-loop that will sum up odd numbers to the `oddSum` variable. We want to add 50 odd numbers starting from 1.
 Console.log your results.
 */
+
+var oddSum = 0;
+
+for(var i = 0; i<100; i++){
+  if(i % 2 === 1){
+    oddSum += i;
+  }
+}
+console.log(oddSum);
   
 
 /* 7) Oops There It is
