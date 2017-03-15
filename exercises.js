@@ -205,6 +205,22 @@ Declare a variable named `topQuote` and assign it to a String value of your favo
 Write a function that will iterate through the string value and return the longest word in that quote. Console.log your result.
 */
 
+var topQuote = ["so", "it", "goes"];
+
+function longestWord(str){
+  var longest = 0;
+  var word = undefined;
+  for(var i=0; i<str.length; i++){
+    if (longest < str[i].length){//longest is used to rep the number of letters in the longest word; str[i].length is the number of letters in the ith element in the array.
+      longest = str[i].length;
+      word = str[i]
+      }
+    }
+    return word;
+  }
+
+console.log(longestWord(topQuote));
+
 
 
 /* 12) Puppet Master
