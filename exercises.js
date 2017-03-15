@@ -211,7 +211,7 @@ function longestWord(str){
   var longest = 0;
   var word = undefined;
   for(var i=0; i<str.length; i++){
-    if (longest < str[i].length){//longest is used to rep the number of letters in the longest word; str[i].length is the number of letters in the ith element in the array.
+    if (longest < str[i].length){
       longest = str[i].length;
       word = str[i]
       }
