@@ -51,7 +51,7 @@ This function will iterate through the person parameter and console.log the foll
 
 //3
 
-var presidents = ["Washington", "Adams", "Jefferson", "Madison", "Monroe"];
+var presidents = ["Washington", "Adams", "Jefferson", "Madison", "Monroe"]
 
 for(var i = 0; i<presidents.length; i++){
   console.log("The value at " + [i] + " is " + presidents[i] + ".");
@@ -205,19 +205,36 @@ Declare a variable named `topQuote` and assign it to a String value of your favo
 Write a function that will iterate through the string value and return the longest word in that quote. Console.log your result.
 */
 
-var topQuote = ["so", "it", "goes"];
+// var topQuote = ["so", "it", "goes"];
+
+// function longestWord(str){
+//   var longest = 0;
+//   var word = undefined;
+//   for(var i=0; i<str.length; i++){
+//     if (longest < str[i].length){
+//       longest = str[i].length;
+//       word = str[i]
+//       }
+//     }
+//     return word;
+//   }
+
+// console.log(longestWord(topQuote));
+
+
+
+var topQuote = "so it goes";
 
 function longestWord(str){
-  var longest = 0;
-  var word = undefined;
-  for(var i=0; i<str.length; i++){
-    if (longest < str[i].length){
-      longest = str[i].length;
-      word = str[i]
-      }
+  var strToArray = str.split(" ");
+  var word = "";
+  for(var i =0; i<strToArray.length; i++){
+    if(strToArray[i].length > word.length){
+      word = strToArray[i]; 
     }
-    return word;
   }
+  return word;
+}
 
 console.log(longestWord(topQuote));
 
@@ -339,5 +356,3 @@ function graduateAndSetNewClass(cohort){
 
 graduateAndSetNewClass(currentCohort);
 console.log(currentCohort);
-
-
