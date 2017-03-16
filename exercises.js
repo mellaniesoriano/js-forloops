@@ -51,7 +51,7 @@ This function will iterate through the person parameter and console.log the foll
 
 //3
 
-var presidents = ["Washington", "Adams", "Jefferson", "Madison", "Monroe"]
+var presidents = ["Washington", "Adams", "Jefferson", "Madison", "Monroe"];
 
 for(var i = 0; i<presidents.length; i++){
   console.log("The value at " + [i] + " is " + presidents[i] + ".");
@@ -273,8 +273,71 @@ Write a function named `graduateAndSetNewClass`, which takes a single argument c
    @param Datatype: Array `cohort`
 
 The function will iterate through the `cohort` argument and check each student's `enrolled` property.
-If the `enrolled` property is set to `true` then change that student's `graduated` property to `true`. Otherwise, if `enrolled` is set to `false` then change `enrolled` to `true` leaving `graduated` alone and unchanged.
+
+If the `enrolled` property is set to `true` then change that student's `graduated` property to `true`.
+
+Otherwise, if `enrolled` is set to `false` then change `enrolled` to `true` leaving `graduated` alone and unchanged.
+
 Console.log your result.
 */
+
+var currentCohort = [
+  {
+    name: 'Doug',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Pat',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Marsha',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Moira',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Ben',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Nigel the Giraffe',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Brandon the Shark',
+    graduated: false,
+    enrolled: true
+  }
+];
+
+// The function will iterate through the `cohort` argument and check each student's `enrolled` property.
+
+// If the `enrolled` property is set to `true` then change that student's `graduated` property to `true`.
+
+// Otherwise, if `enrolled` is set to `false` then change `enrolled` to `true` leaving `graduated` alone and unchanged.
+
+// Console.log your result.
+
+function graduateAndSetNewClass(cohort){
+  for(var i = 0; i<cohort.length; i++){
+    if(cohort[i].enrolled === true){
+      cohort[i].graduated = true
+    } else {
+       cohort[i].enrolled = true
+  }
+}
+}
+
+graduateAndSetNewClass(currentCohort);
+console.log(currentCohort);
 
 
